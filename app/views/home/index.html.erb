@@ -1,46 +1,18 @@
 <div class="homePage">
     <div class="titleBar">
         <div class="title">
-            MOVIE BUFF
+            OSCAR LISTR
         </div>
     </div>
 
     <div class="introText">
-        With movie buff you can show off which movies you've watched multiple times!
+        Find Oscar Nominees! (2010-2013)
     </div>
     <div class="movieListContainer">
+        <% @movies.each do |movie| %>
         <div class="singleMovie">
-            I've seen this movie 20 times!
+            <%= movie.title %> -- <%= movie.year %>
         </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
-        <div class="singleMovie">
-            I've seen this movie 20 times!
-        </div>
+        <% end %>
     </div>
 </div>
