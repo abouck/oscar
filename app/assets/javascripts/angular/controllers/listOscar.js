@@ -13,11 +13,11 @@ angular.module('listOscar', [])
   }])
 
 .controller('homeCtrl', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http){
-  $scope.list = []
+  $scope.list = [];
+  $scope.sort = '';
   $http({method: 'GET', url: '/api/oscarlist.json'}).
     success(function(data, status, headers, config) {
-      $scope.list = data
-      console.log(data)
-    })
+      $scope.list = data;
+    });
 
 }]);

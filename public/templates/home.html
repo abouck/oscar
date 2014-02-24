@@ -1,3 +1,31 @@
-<!-- public/templates/home.html -->
+<div class="homePage">
+    <div class="titleBar">
+        <div class="buttonContainer">
+          <div class="sort alpha" ng-click="sort = 'title'; reverse=!reverse">
+            Sort By Title
+          </div>
+          <div class="sort year" ng-click="sort = 'year'; reverse=!reverse">
+            Sort By Year
+          </div>
+          <input class="textBox" ng-model="detail.title" placeholder="Search By Title">
+          <input class="textBox" ng-model="detail.year" placeholder="Search By Year">
+        </div>
+        <div class="title">
+            OSCAR LISTR
+        </div>
+        
 
-{{awesome}}
+    </div>
+    <div class="topSpacer"></div>
+    <div class="introText">
+        Find Oscar Nominees! (2010-2013)
+    </div>
+    <div class="movieListContainer">
+        <div class="singleMovie" ng-repeat="movie in list | orderBy:sort:reverse | filter:detail">
+            {{movie.title}} -- {{movie.year}}
+        </div>
+    </div>
+    <div class="footer">
+      Amazing AngularJS by Adam Bouck
+    </div>
+</div>
